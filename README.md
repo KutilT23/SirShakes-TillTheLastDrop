@@ -25,4 +25,4 @@ plnit questy a splatit dluh.
 ![Screenshot 7](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171855.png)
 
 ## Dokumentace
-[Herní design dokument (PDF)](Sir%20Shakes%20Till%20The%20Last%20Drop.pdf)
+[Herní design dokument (PDF)](Sir%20Shakes%20Till%20The%20Last%20Drop_.pdf)
