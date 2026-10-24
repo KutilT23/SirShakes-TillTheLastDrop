@@ -23,6 +23,15 @@ plnit questy a splatit dluh.
 ![Screenshot 5](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171707.png)
 ![Screenshot 6](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171740.png)
 ![Screenshot 7](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171855.png)
+![Screenshot 8](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20185155.png)
+![Screenshot 9](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20185231.png)
+![Screenshot 10](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20185700.png)
+![Screenshot 11](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20185732.png)
+![Screenshot 12](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20185936.png)
+![Screenshot 13](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190012.png)
+![Screenshot 14](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190211.png)
+![Screenshot 15](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190317.png)
+![Screenshot 16](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190552.png)
 
 ## Dokumentace
 [Herní design dokument (PDF)](Sir_Shakes_Till_The_Last_Drop_.pdf)
