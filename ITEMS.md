@@ -31,7 +31,7 @@ Všechno jídlo a pití je stackovatelné (max 99 ks).
 | Název | Váha (kg) | Cena (zl.) | Popis |
 |---|---|---|---|
 | Empty Beer | 0.5 | 2 | Empty. Much like your purse and your promises to quit. |
-| Keys | 0.2 | 10 | House and chest keys. Mostly chest. Nobody asks whose. |
+| Keys | 0.2 | 1 | House and chest keys. Mostly chest. Nobody asks whose. |
 | A Book of Horny Man | 1 | 25 | A thick tome of questionable literary value. You're only reading it for the history. |
 
 Klíče generuje `LootBagManager` a jejich Lock ID se bere z majitele bagu (`Lock Owner` nebo `Witness NPC`).
