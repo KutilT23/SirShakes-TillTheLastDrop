@@ -3,6 +3,26 @@
 Přehled všech změn v Sir Shakes: Till The Last Drop.
 Nejnovější záznamy jsou nahoře.
 
+## 2026-10-25
+
+### Přidáno
+- **`ITEMS.md`**: přehled všech itemů ve hře (zbraně, brnění, jídlo a pití, ostatní).
+- Nový item **Mead** (medovina), nahrazuje Mysterious Potion.
+- Vtipné popisky u všech itemů.
+
+### Změněno
+- **Přebalancování itemů** (realističtější hodnoty hladu, HP, alkoholu, váhy a ceny).
+  - Jídlo doplňuje méně, pivo a medovina mají reálný obsah alkoholu.
+  - Zbraně a brnění jsou lehčí, helma dává menší bonus charismatu.
+  - Cena klíčů snížena na 1.
+- Mysterious Potion přejmenován na Mead (jméno i Item Type ID).
+
+### Opraveno
+- Ukradené předměty (kategorie `Steal`) v inventáři nezobrazovaly ikonky hladu a HP.
+  - `InventorySlotUI.SetItem()` nově čte `categoryAfterPickup`.
+  - `InventoryManager.PickupItem()` a `ExecuteTransfer()` při přesunu do inventáře
+    přepíšou `category` na `categoryAfterPickup`.
+
 ## 2026-10-24
 
 ### Přidáno
