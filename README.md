@@ -15,6 +15,11 @@ plnit questy a splatit dluh.
 - společník Tonda, který radí s questy a ovládáním
 - inventář s popisem předmětů, truhly, den a noc
 
+## Dokumentace
+- [Herní design dokument (PDF)](Sir_Shakes_Till_The_Last_Drop_.pdf)
+- [Changelog (přehled změn)](CHANGELOG.md)
+- [Seznam itemů](ITEMS.md)
+
 ## Screenshoty
 ![Screenshot 1](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171450.png)
 ![Screenshot 2](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171528.png)
@@ -33,7 +38,4 @@ plnit questy a splatit dluh.
 ![Screenshot 15](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190317.png)
 ![Screenshot 16](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-24%20190552.png)
 
-## Dokumentace
-- [Herní design dokument (PDF)](Sir_Shakes_Till_The_Last_Drop_.pdf)
-- [Changelog (přehled změn)](CHANGELOG.md)
-- [Seznam itemů](ITEMS.md)
+
