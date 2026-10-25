@@ -1,0 +1,41 @@
+# Seznam itemů
+
+Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
+Hlad se vyčerpá zhruba za 100 s, hodnoty jídla je proto dobré číst relativně k tomu.
+
+## Zbraně
+
+| Název | Damage | Váha (kg) | Cena (zl.) | Kost | Popis |
+|---|---|---|---|---|---|
+| Bartender's sword | 15 | 2 | 10 | Finger.R | Shakes's true and only sword. Mostly used for opening barrels. Occasionally for people. |
+
+## Brnění
+
+| Název | Armor | Charisma | Váha (kg) | Cena (zl.) | Kost | Popis |
+|---|---|---|---|---|---|---|
+| Iron Helmet | 10 | +3 | 2.5 | 50 | Head_end | Protects your skull. Does nothing for your face, which is the actual problem. |
+
+## Jídlo a pití
+
+| Název | Hlad | HP | Alkohol | Váha (kg) | Cena (zl.) | Popis |
+|---|---|---|---|---|---|---|
+| Apple | 10 | 3 | 0 | 0.2 | 5 | Keeps the doctor away. Which is convenient, since you can't afford him. Probably not poisonous. |
+| Bread | 30 | 5 | 0 | 0.5 | 10 | Bread, bread, bread. Hard enough to double as a weapon, dry enough to double as a punishment. |
+| Beer | 5 | 0 | 20 | 1 | 15 | Liquid courage, served warm. Technically a meal, if you squint and lower your standards. |
+| Mead | 5 | 0 | 40 | 1 | 30 | Honey, water and questionable decisions, fermented for months. Tastes sweet. Hits like a mule. |
+
+Všechno jídlo a pití je stackovatelné (max 99 ks).
+
+## Ostatní
+
+| Název | Váha (kg) | Cena (zl.) | Popis |
+|---|---|---|---|
+| Empty Beer | 0.5 | 2 | Empty. Much like your purse and your promises to quit. |
+| Keys | 0.2 | 10 | House and chest keys. Mostly chest. Nobody asks whose. |
+| A Book of Horny Man | 1 | 25 | A thick tome of questionable literary value. You're only reading it for the history. |
+
+Klíče generuje `LootBagManager` a jejich Lock ID se bere z majitele bagu (`Lock Owner` nebo `Witness NPC`).
+
+## Nápady na nové itemy
+
+- [ ] ...
