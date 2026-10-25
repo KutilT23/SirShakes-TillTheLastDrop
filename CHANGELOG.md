@@ -10,6 +10,7 @@ Nejnovější záznamy jsou nahoře.
 - Nový item **Mead** (medovina), nahrazuje Mysterious Potion.
 - Nový item **Kombucha**: snižuje hladinu alkoholu (záporná hodnota v `Item Data`),
   slouží k vystřízlivění.
+- Nový item **Cheap Wine**: levné a slabší víno (+15 alkoholu), nejslabší alkohol ve hře.
 - Vtipné popisky u všech itemů.
 
 ### Změněno
