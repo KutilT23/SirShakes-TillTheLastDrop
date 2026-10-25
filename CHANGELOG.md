@@ -8,6 +8,8 @@ Nejnovější záznamy jsou nahoře.
 ### Přidáno
 - **`ITEMS.md`**: přehled všech itemů ve hře (zbraně, brnění, jídlo a pití, ostatní).
 - Nový item **Mead** (medovina), nahrazuje Mysterious Potion.
+- Nový item **Kombucha**: snižuje hladinu alkoholu (záporná hodnota v `Item Data`),
+  slouží k vystřízlivění.
 - Vtipné popisky u všech itemů.
 
 ### Změněno
@@ -16,6 +18,10 @@ Nejnovější záznamy jsou nahoře.
   - Zbraně a brnění jsou lehčí, helma dává menší bonus charismatu.
   - Cena klíčů snížena na 1.
 - Mysterious Potion přejmenován na Mead (jméno i Item Type ID).
+- `ItemData.Use()`: alkohol se nově aplikuje i při záporné hodnotě (`alcoholValue != 0`),
+  dřív se záporná hodnota ignorovala a item se nespotřeboval.
+- `PlayerStats.Drink()`: hladina alkoholu je nově ohraničena na 0 až 100 (`Mathf.Clamp`).
+- `InventoryManager.OpenExamine()`: v popisu se zobrazí i záporný alkohol (např. `Alcohol: -15%`).
 
 ### Opraveno
 - Ukradené předměty (kategorie `Steal`) v inventáři nezobrazovaly ikonky hladu a HP.
