@@ -1,7 +1,6 @@
 # Seznam itemů
 
 Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
-Hlad se vyčerpá zhruba za 100 s, hodnoty jídla je proto dobré číst relativně k tomu.
 
 ## Zbraně
 
