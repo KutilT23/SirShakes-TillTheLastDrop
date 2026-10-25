@@ -23,6 +23,7 @@ Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
 | Beer | 5 | 0 | 20 | 1 | 15 | Liquid courage, served warm. Technically a meal, if you squint and lower your standards. |
 | Mead | 5 | 0 | 40 | 1 | 30 | Honey, water and questionable decisions, fermented for months. Tastes sweet. Hits like a mule. |
 | Kombucha | 3 | 2 | -20 | 0.5 | 40 | Fermented tea that tastes like a mistake. Your liver says thank you. Your tongue files a complaint. |
+| Cheap Wine | 1 | 0 | 15 | 1 | 10 | Vintage: last Tuesday. More vinegar than wine, more regret than either. |
 
 Všechno jídlo a pití je stackovatelné (max 99 ks).
 
