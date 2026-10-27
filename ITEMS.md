@@ -24,6 +24,8 @@ Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
 | Mead | 5 | 0 | 40 | 1 | 30 | Honey, water and questionable decisions, fermented for months. Tastes sweet. Hits like a mule. |
 | Kombucha | 3 | 2 | -20 | 0.5 | 40 | Fermented tea that tastes like a mistake. Your liver says thank you. Your tongue files a complaint. |
 | Cheap Wine | 1 | 0 | 15 | 1 | 10 | Vintage: last Tuesday. More vinegar than wine, more regret than either. |
+| Egg        | 10   | 6  | 0       | 0.1       | 8          | Fried to perfection by a tavern cook with questionable hygiene. The yolk stares back. Eat it before it blinks. |
+| Beef Slab  | 35   | 12 | 0       | 0.8       | 35         | Chewy enough to count as cardio. Nobody asks which cow. The cow doesn't either.                                |
 
 Všechno jídlo a pití je stackovatelné (max 99 ks).
 
