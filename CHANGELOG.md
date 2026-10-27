@@ -3,6 +3,26 @@
 Přehled všech změn v Sir Shakes: Till The Last Drop.
 Nejnovější záznamy jsou nahoře.
 
+## 2026-10-27
+
+### Přidáno
+
+- Nový item **Egg** (volské oko): lehká svačina s lepším léčením než jablko (hlad 10, HP 6).
+- Nový item **Beef Slab**: nejsytější jídlo ve hře (hlad 35, HP 12), levnější než by odpovídalo síle.
+- `AIScript`: nové pole `Otacet Se Na Hrace`. Když je odškrtnuté, NPC se nepootočí na hráče při pozdravu nebo oznámení questu, ale při rozhovoru přes `E` se otočí normálně.
+
+### Změněno
+
+- `AIScript.StartTalking()`: `lookAtTarget` se nastavuje jen při zapnutém `Otacet Se Na Hrace`. `ForceStartTalking()` (rozhovor) zůstává beze změny.
+
+### Opraveno
+
+- Barman se otáčel na hráče, který jen prošel kolem. Uložená "původní rotace" se pak při rozhovoru brala už z otočeného stavu, takže se po dialogu nevrátil správně.
+
+### Poznámky
+
+- U barmana je potřeba v Inspectoru odškrtnout `Otacet Se Na Hrace`. Výchozí hodnota je zapnuto, takže ostatní NPC se chovají jako dřív.
+
 ## 2026-10-25
 
 ### Přidáno
