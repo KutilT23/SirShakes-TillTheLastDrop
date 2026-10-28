@@ -3,6 +3,23 @@
 Přehled všech změn v Sir Shakes: Till The Last Drop.
 Nejnovější záznamy jsou nahoře.
 
+## 2026-10-29
+
+### Přidáno
+
+- Nový item **Visored Helmet**: těžší helma s hledím, víc armoru (15) i charismatu (+4)
+  než Iron Helmet.
+- Model obchodu (domu): upravený model, který se bude přidávat do scény.
+
+### Změněno
+
+- **NavMesh Surface** přestavěn od nuly (nový bake). NPC se tak orientují podle
+  aktuální podoby scény.
+
+### Poznámky
+
+- Po úpravách scény je potřeba NavMesh bakeovat znovu, jinak NPC nebudou znát nové překážky.
+
 ## 2026-10-27
 
 ### Přidáno
