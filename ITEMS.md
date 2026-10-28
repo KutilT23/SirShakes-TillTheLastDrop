@@ -13,6 +13,7 @@ Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
 | Název | Armor | Charisma | Váha (kg) | Cena (zl.) | Kost | Popis |
 |---|---|---|---|---|---|---|
 | Iron Helmet | 10 | +3 | 2.5 | 50 | Head_end | Protects your skull. Does nothing for your face, which is the actual problem. |
+| Visored Helmet | 15    | +4       | 3.5       | 90         | Head_end | Finally, a helmet that hides the face problem. Can't see a thing, but neither can they. |
 
 ## Jídlo a pití
 
@@ -26,6 +27,7 @@ Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
 | Cheap Wine | 1 | 0 | 15 | 1 | 10 | Vintage: last Tuesday. More vinegar than wine, more regret than either. |
 | Egg        | 10   | 6  | 0       | 0.1       | 8          | Fried to perfection by a tavern cook with questionable hygiene. The yolk stares back. Eat it before it blinks. |
 | Beef Slab  | 35   | 12 | 0       | 0.8       | 35         | Chewy enough to count as cardio. Nobody asks which cow. The cow doesn't either.                                |
+
 
 Všechno jídlo a pití je stackovatelné (max 99 ks).
 
