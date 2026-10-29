@@ -16,9 +16,31 @@ Nejnovější záznamy jsou nahoře.
 ### Změněno
 
 - **NavMesh Surface** přestavěn od nuly (nový bake).
+- **Dohled NPC**: `NPCVisionDetector`, `AIScript` a `GuardNPC` mají nově nastavitelnou výšku
+  očí NPC (`Eye Height`) a výšku cíle na hráči (`Target Height`). Dřív byly hodnoty
+  natvrdo (1.0 a 1.5), které neodpovídaly velikosti postav, takže NPC mířil hráči na břicho.
+  Paprsek teď jde z očí NPC na hruď hráče, takže hráč schovaný za nízkou překážkou
+  zůstane nepozorovaný, a naopak jde načapat jen při skutečném výhledu.
+- `NPCVisionDetector.OnDrawGizmosSelected()`: gizmo ukazuje výšku očí (žlutá kulička),
+  cílový bod na hráči (oranžová kulička) a paprsek mezi nimi (šedý, červený při zpozorování).
 
 ### Poznámky
 
+- **Nastavení dohledu (platí pro měřítko světa, kde má postava přes 7 jednotek):**
+  - `Eye Height` (na NPC) = **6.4**. Měří se od pivotu NPC, který je na nohou.
+  - `Target Height` (na hráči) = **2.5** (hruď). Hráč má pivot uprostřed těla,
+    ne na nohou. Hodnota 3.7 (hlava) hráče netrefovala, protože kapsle je nahoře
+    úzká. Níž = hráč je vidět za nižšími překážkami, výš = hůř se trefuje.
+  - `View Distance` = **25**, `View Angle` = **140** (výchozí hodnoty 5 až 7 byly
+    pro menší měřítko, NPC by viděl jen zblízka).
+- Hodnoty se nastavují **zvlášť** v každé komponentě, která dohled počítá:
+  `NPCVisionDetector` (krádež, svědci), `AIScript` (pozdravy a questy) a `GuardNPC`
+  (strážní). Při změně výšky je potřeba ji upravit na všech třech místech.
+- **Krádež řeší `NPCVisionDetector`.** NPC, který má hráče načapat při krádeži, musí mít
+  tuhle komponentu. Strážní mají vlastní dohled v `GuardNPC`.
+- `Obstacle Mask` na `NPCVisionDetector` se nepoužívá, paprsek jde přes všechny vrstvy.
+- Při nastavování nové postavy změřit výšku těla (spodek a vršek od pivotu) a podle toho
+  zvolit `Eye Height`. Pivot je u každé postavy jinde.
 - **Jak mají fungovat colidery zbraní:** každá zbraň má vlastní collider na samostatném
   prázdném objektu (child zbraně). Ten objekt nese komponenty `MeleeHitbox` a `DamageCollider`.
   `MeleeHitbox` určuje, že právě tento collider na špičce zbraně ubírá životy, a
