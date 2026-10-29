@@ -9,16 +9,23 @@ Nejnovější záznamy jsou nahoře.
 
 - Nový item **Visored Helmet**: těžší helma s hledím, víc armoru (15) i charismatu (+4)
   než Iron Helmet.
-- Model obchodu (domu): upravený model, který se bude přidávat do scény.
+- Nový item **Militia Sword**: průměrný meč lepší než Bartender's sword (damage 22 místo 15).
+- Nový item **Knight's Longsword**: nejsilnější zbraň ve hře (damage 35), nejdražší item (200 zl.).
+- Model obchodu (domu): upravený model pro přidání do scény.
 
 ### Změněno
 
-- **NavMesh Surface** přestavěn od nuly (nový bake). NPC se tak orientují podle
-  aktuální podoby scény.
+- **NavMesh Surface** přestavěn od nuly (nový bake).
 
 ### Poznámky
 
-- Po úpravách scény je potřeba NavMesh bakeovat znovu, jinak NPC nebudou znát nové překážky.
+- **Jak mají fungovat colidery zbraní:** každá zbraň má vlastní collider na samostatném
+  prázdném objektu (child zbraně). Ten objekt nese komponenty `MeleeHitbox` a `DamageCollider`.
+  `MeleeHitbox` určuje, že právě tento collider na špičce zbraně ubírá životy, a
+  `DamageCollider` ho označuje jako collider, který se nesmí vypínat. Collider musí mít
+  zapnuté `Is Trigger`, jinak se `OnTriggerEnter` nezavolá a zbraň neudělí damage.
+- Při přidávání nové zbraně je potřeba tuhle strukturu zopakovat (Militia Sword původně
+  damage nedával právě kvůli chybějícímu `Is Trigger`).
 
 ## 2026-10-27
 
