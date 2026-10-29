@@ -12,42 +12,44 @@ Nejnovější záznamy jsou nahoře.
 - Nový item **Militia Sword**: průměrný meč lepší než Bartender's sword (damage 22 místo 15).
 - Nový item **Knight's Longsword**: nejsilnější zbraň ve hře (damage 35), nejdražší item (200 zl.).
 - Model obchodu (domu): upravený model pro přidání do scény.
+- `Eye Height` a `Target Height` v `NPCVisionDetector`, `AIScript` a `GuardNPC`: nastavitelná
+  výška očí NPC a bodu na hráči, kam NPC míří.
+- `PlayerStats.regenDelayAfterHit`: prodleva regenerace zdraví po zásahu (výchozí 7 s).
 
 ### Změněno
 
 - **NavMesh Surface** přestavěn od nuly (nový bake).
-- **Dohled NPC**: `NPCVisionDetector`, `AIScript` a `GuardNPC` mají nově nastavitelnou výšku
-  očí NPC (`Eye Height`) a výšku cíle na hráči (`Target Height`). Dřív byly hodnoty
-  natvrdo (1.0 a 1.5), které neodpovídaly velikosti postav, takže NPC mířil hráči na břicho.
-  Paprsek teď jde z očí NPC na hruď hráče, takže hráč schovaný za nízkou překážkou
-  zůstane nepozorovaný, a naopak jde načapat jen při skutečném výhledu.
+- **Dohled NPC**: výšky byly natvrdo (1.0 a 1.5) a neodpovídaly velikosti postav, NPC
+  mířil hráči na břicho. Paprsek teď jde z očí NPC na hruď hráče, takže hráč schovaný
+  za nízkou překážkou zůstane nepozorovaný.
 - `NPCVisionDetector.OnDrawGizmosSelected()`: gizmo ukazuje výšku očí (žlutá kulička),
   cílový bod na hráči (oranžová kulička) a paprsek mezi nimi (šedý, červený při zpozorování).
+- `PlayerStats`: regenerace zdraví začne až `regenDelayAfterHit` sekund po posledním zásahu
+  (`TakeDamage()`). Dřív se hráč léčil hned, takže souboje se strážnými nebyly napínavé.
+  Další zásah odpočet vynuluje.
 
 ### Poznámky
 
-- **Nastavení dohledu (platí pro měřítko světa, kde má postava přes 7 jednotek):**
-  - `Eye Height` (na NPC) = **6.4**. Měří se od pivotu NPC, který je na nohou.
-  - `Target Height` (na hráči) = **2.5** (hruď). Hráč má pivot uprostřed těla,
-    ne na nohou. Hodnota 3.7 (hlava) hráče netrefovala, protože kapsle je nahoře
-    úzká. Níž = hráč je vidět za nižšími překážkami, výš = hůř se trefuje.
-  - `View Distance` = **25**, `View Angle` = **140** (výchozí hodnoty 5 až 7 byly
-    pro menší měřítko, NPC by viděl jen zblízka).
-- Hodnoty se nastavují **zvlášť** v každé komponentě, která dohled počítá:
-  `NPCVisionDetector` (krádež, svědci), `AIScript` (pozdravy a questy) a `GuardNPC`
-  (strážní). Při změně výšky je potřeba ji upravit na všech třech místech.
-- **Krádež řeší `NPCVisionDetector`.** NPC, který má hráče načapat při krádeži, musí mít
-  tuhle komponentu. Strážní mají vlastní dohled v `GuardNPC`.
-- `Obstacle Mask` na `NPCVisionDetector` se nepoužívá, paprsek jde přes všechny vrstvy.
-- Při nastavování nové postavy změřit výšku těla (spodek a vršek od pivotu) a podle toho
-  zvolit `Eye Height`. Pivot je u každé postavy jinde.
 - **Jak mají fungovat colidery zbraní:** každá zbraň má vlastní collider na samostatném
   prázdném objektu (child zbraně). Ten objekt nese komponenty `MeleeHitbox` a `DamageCollider`.
   `MeleeHitbox` určuje, že právě tento collider na špičce zbraně ubírá životy, a
   `DamageCollider` ho označuje jako collider, který se nesmí vypínat. Collider musí mít
-  zapnuté `Is Trigger`, jinak se `OnTriggerEnter` nezavolá a zbraň neudělí damage.
-- Při přidávání nové zbraně je potřeba tuhle strukturu zopakovat (Militia Sword původně
-  damage nedával právě kvůli chybějícímu `Is Trigger`).
+  zapnuté `Is Trigger`, jinak se `OnTriggerEnter` nezavolá a zbraň neudělí damage
+  (Militia Sword původně damage nedával právě kvůli tomu).
+- **Nastavení dohledu** (měřítko světa, kde má postava přes 7 jednotek):
+  - `Eye Height` (na NPC) = **6.4**, měřeno od pivotu NPC (na nohou).
+  - `Target Height` (na hráči) = **2.5** (hruď). Hráč má pivot uprostřed těla. Hodnota 3.7
+    (hlava) hráče netrefovala, protože kapsle je nahoře úzká. Níž = hráč je vidět i za
+    nižšími překážkami.
+  - `View Distance` = **25**, `View Angle` = **140** (výchozí 5 až 7 bylo pro menší měřítko).
+- Hodnoty dohledu se nastavují **zvlášť** v každé komponentě: `NPCVisionDetector` (krádež,
+  svědci), `AIScript` (pozdravy a questy) a `GuardNPC` (strážní). Při změně je potřeba
+  upravit všechny tři.
+- **Krádež řeší `NPCVisionDetector`.** NPC, který má hráče načapat při krádeži, musí mít
+  tuhle komponentu. Strážní mají vlastní dohled v `GuardNPC`.
+- `Obstacle Mask` na `NPCVisionDetector` se nepoužívá, paprsek jde přes všechny vrstvy.
+- U nové postavy změřit výšku těla (spodek a vršek od pivotu) a podle toho zvolit `Eye Height`.
+- Rychlost regenerace určuje `Health Regen Rate` v Inspectoru na `PlayerStats`.
 
 ## 2026-10-27
 
