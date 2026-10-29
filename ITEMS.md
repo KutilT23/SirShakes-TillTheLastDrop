@@ -7,6 +7,8 @@ Přehled všech itemů ve hře Sir Shakes: Till The Last Drop.
 | Název | Damage | Váha (kg) | Cena (zl.) | Kost | Popis |
 |---|---|---|---|---|---|
 | Bartender's sword | 15 | 2 | 10 | Finger.R | Shakes's true and only sword. Mostly used for opening barrels. Occasionally for people. |
+| Militia Sword      | 22     | 2.5       | 60         | Finger.R | Standard issue for people who were told there'd be fewer swords involved. Sharp, balanced, and slightly judgmental. |
+| Knight's Longsword | 35     | 3.5       | 200        | Finger.R | Shiny, heavy, and far too good for a tavern brawl. You'll use it for a tavern brawl anyway. |
 
 ## Brnění
 
