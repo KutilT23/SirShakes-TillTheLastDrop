@@ -12,6 +12,7 @@ plnit questy a splatit dluh.
 - hlad, spánek, životy, charisma a reputace u NPC
 - krádeže, nahlášení stráži a konfrontace se strážným
 - questy navázané na sebe, dialogy načítané z JSON
+- obchodování s NPC: nákup a prodej itemů za groše, examine před koupí
 - společník Tonda, který radí s questy a ovládáním
 - inventář s popisem předmětů, truhly, den a noc
 
@@ -21,6 +22,13 @@ plnit questy a splatit dluh.
 - [Seznam itemů](ITEMS.md)
 
 ## Screenshoty
+
+### Obchodování
+![Obchodování 1](SirShakesScreenShots/TRADE_1.png)
+![Obchodování 2](SirShakesScreenShots/TRADE_2.png)
+![Obchodování 3](SirShakesScreenShots/TRADE_3.png)
+
+### Hra
 ![Screenshot 1](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171450.png)
 ![Screenshot 2](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171528.png)
 ![Screenshot 3](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171613.png)
