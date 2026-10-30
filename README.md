@@ -24,9 +24,10 @@ plnit questy a splatit dluh.
 ## Screenshoty
 
 ### Obchodování
-![Obchodování 1](SirShakesScreenShots/TRADE_1.png)
-![Obchodování 2](SirShakesScreenShots/TRADE_2.png)
-![Obchodování 3](SirShakesScreenShots/TRADE_3.png)
+
+![Obchodování 1](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-30%20142941.png)
+![Obchodování 2](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-30%20143001.png)
+![Obchodování 3](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-10-30%20142756.png)
 
 ### Hra
 ![Screenshot 1](SirShakesScreenShots/Sn%C3%ADmek%20obrazovky%202026-06-06%20171450.png)
