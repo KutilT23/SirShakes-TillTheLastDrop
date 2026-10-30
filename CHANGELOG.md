@@ -3,6 +3,38 @@
 Přehled všech změn v Sir Shakes: Till The Last Drop.
 Nejnovější záznamy jsou nahoře.
 
+## 2026-10-30
+
+### Přidáno
+
+- **Trading systém**: obchodování s NPC za groše.
+  - **`MerchantNPC`**: komponenta na NPC se seznamem zboží (`stock`, prefaby ve scéně), volitelnými násobiteli `buyMultiplier` / `sellMultiplier` (výchozí 1.0 a 0.5) a vlastním pozdravem `greetingDialogID`.
+  - **`TradeManager`**: singleton, který řeší otevření obchodu, výběr itemů, examine, koupi, prodej a UI panelu.
+  - **Obchodní panel**: vlevo inventář hráče, vpravo zboží obchodníka, nahoře počet grošů a jméno obchodníka. Používá stávající prefab slotu.
+  - **Vlastní examine panel pro obchod**: oddělený od examine panelu v inventáři, ukazuje popis, staty, váhu a cenu vybraného itemu.
+  - **Koupě**: plná cena, kontrola grošů, notifikace při nedostatku peněz.
+  - **Prodej**: obchodník vykoupí item za polovinu ceny a nabízí ho dál za plnou cenu.
+  - **Ovládání**: klik vybere item, **F** examine, **držení E** koupí nebo prodá 1 kus, **Shift** při dokončení celý stack, **Q / ESC** zavře obchod.
+- Nová dialogová akce **`trade`**: tlačítko v dialogu otevře obchod (viz ukázka `merchant_greeting` v JSONu).
+- Logy s prefixem `[TRADE]` pro otevření, koupi, prodej a nedostatek peněz.
+
+### Změněno
+
+- `InventoryManager.CanItemsStack()` je nově `public` (používá ho obchodník při slučování stacků).
+- `InventorySlotUI`: nový delegát `onTradeClick`, kterým `TradeManager` zachytává kliky na sloty. `OnDrop` má ochranu proti `manager == null`.
+- `DialogSystemJSON.VykonatMoznost()`: nová větev pro akci `trade` (zavře dialog a otevře obchod).
+- `QuestNPC.InteractWithNPC()`: NPC s `MerchantNPC` bez aktivního questu použije vlastní pozdrav místo `obecny_pozdrav`.
+- `UIGlobalManager`: `ForceCloseAll()` zavírá i obchod (ESC) a `RequestExclusiveOpen()` blokuje během obchodu otevření inventáře a mapy.
+- Text akce v obchodu zkrácen na formát `Buy: 50 gr.` / `Sell: 25 gr.`.
+
+### Poznámky
+
+- Prodejní cena se zaokrouhluje dolů, takže item s cenou 1 se prodá za 0.
+- Nasazené itemy se v levém panelu nezobrazují, nejdou tedy prodat.
+- Při koupi se Shiftem se množství omezí na to, co si hráč může dovolit.
+- Examine ukazuje základní cenu itemu, ne přepočtenou. Při `buyMultiplier` 1.0 je to totéž.
+- Zákaz prodeje klíčů a quest itemů je odložený na později.
+
 ## 2026-10-29
 
 ### Přidáno
